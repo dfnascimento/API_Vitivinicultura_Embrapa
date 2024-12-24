@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
 import requests
 from bs4 import BeautifulSoup
+from config import *
+from api.producao import producao
 
 
 app = Flask(__name__)
+app.register_blueprint(producao, url_prefix='/producao')
 
 items = []
 
@@ -56,6 +59,7 @@ def scrape_title():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
 
 
 if __name__ == '__main__':
