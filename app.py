@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 import requests
 from bs4 import BeautifulSoup
-from config import *
 from api.producao import producao
 
 
@@ -60,7 +59,14 @@ def scrape_title():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-
+@app.route('/api/usuarios', methods=['GET'])
+def get_usuarios():
+    usuarios = [
+        {"id": 1, "nome": "Alice", "email": "alice@example.com"},
+        {"id": 2, "nome": "Bob", "email": "bob@example.com"},
+        {"id": 3, "nome": "Charlie", "email": "charlie@example.com"}
+    ]
+    return jsonify(usuarios)
 
 if __name__ == '__main__':
     app.run(debug=True)

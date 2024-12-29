@@ -1,8 +1,7 @@
 
 from flask import Blueprint, Flask, jsonify, request
-import requests
-from bs4 import BeautifulSoup
-from config import *
+from utils import ano_invalido
+from core.scrapping import scrap_producao
 
 producao = Blueprint('producao', __name__ )
 
@@ -10,28 +9,22 @@ producao = Blueprint('producao', __name__ )
 def get_producao():
 
     ano = request.args.get('ano')
-    if not ano:
-        return get_producao_all()
+   
+    valida_ano = ano_invalido(ano)
+
+    if valida_ano != None :
+        return valida_ano
+
+    df = scrap_producao(ano)
+
     
-    try:
 
-        response = URL + "?ano=" + ano + "&opcao=opt_02"
-        soup = BeautifulSoup(response.text, 'html.parser')
-        title = soup.title.string.strip()
-        return jsonify({"title": title})
+    if not df.empty:
+
+        df = df.to_json(orient='records', force_ascii=False, indent=4)
+
+        return jsonify(df)
     
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-
-def get_producao_all():
-    try:
-
-        response = "http://vitibrasil.cnpuv.embrapa.br/index.php?ano=2023&opcao=opt_02"
-        soup = BeautifulSoup(response.text, 'html.parser')
-        print(soup)
-        #title = soup.title.string.strip()
-        return jsonify({"title": soup.string})
+    else:
     
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return "Erro"
