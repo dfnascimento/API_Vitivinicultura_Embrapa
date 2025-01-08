@@ -1,5 +1,5 @@
 
-from flask import Blueprint, Flask, jsonify, request
+from flask import Blueprint, request
 from utils import ano_invalido
 from core.scrapping import scrap_producao
 
@@ -17,14 +17,9 @@ def get_producao():
 
     df = scrap_producao(ano)
 
-    
-
     if not df.empty:
-
         df = df.to_json(orient='records', force_ascii=False, indent=4)
-
-        return jsonify(df)
+        return df
     
     else:
-    
         return "Erro"

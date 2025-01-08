@@ -2,10 +2,15 @@ from flask import Flask, jsonify, request
 import requests
 from bs4 import BeautifulSoup
 from api.producao import producao
-
+from api.processamento import processamento
+from api.comercializacao import comercializacao
+from api.importacao import importacao
 
 app = Flask(__name__)
 app.register_blueprint(producao, url_prefix='/producao')
+app.register_blueprint(processamento, url_prefix='/processamento')
+app.register_blueprint(comercializacao, url_prefix='/comercializacao')
+app.register_blueprint(importacao, url_prefix='/importacao')
 
 items = []
 
