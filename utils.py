@@ -2,6 +2,13 @@ import logging
 from config import *
 
 def get_url(opcao, subopcao, ano):
+    """
+    Retorna a URL com os parametros de opcao, subopcao e ano
+    
+     Args:
+        opcao (tupla): Opção do tipo de dados (PRODUCAO, COMERCIALIZACAO, PROCESSAMENTO, IMPORTACAO, EXPORTACAO)
+        subopcao (tupla): Subopção do tipo de dados (VINIFERAS, AMERICANAS_E_HIBRIDAS, ...)
+        ano (str): Ano dos dados a serem extraídos"""
 
     url = ''
 
@@ -16,6 +23,13 @@ def get_url(opcao, subopcao, ano):
 
 
 def ano_invalido(ano):
+    """
+    Verifica se o ano informado é válido
+    
+     Args:
+        ano (str): Ano dos dados a serem extraídos
+     Returns:
+        str: Mensagem de erro caso o ano seja inválido ou None caso seja válido"""
 
     if not ano:
         return "Ano deve ser informado"
@@ -31,6 +45,14 @@ def ano_invalido(ano):
     return None
 
 def subopcao_invalida(opcao, subopcao):
+    """
+    Verifica se a subopção informada é válida
+    
+     Args:
+        opcao (tupla): Opção do tipo de dados (PRODUCAO, COMERCIALIZACAO, PROCESSAMENTO, IMPORTACAO, EXPORTACAO)
+        subopcao (str): Subopcao recebida como string
+     Returns:
+        str: Mensagem de erro caso a subopção seja inválida ou None caso seja válida"""
     
     try:
         subopcao = subopcao.strip().lower()
@@ -65,6 +87,14 @@ def subopcao_invalida(opcao, subopcao):
     return None
 
 def retorna_subopcao(opcao, subopcao):
+    """
+    Retorna a constante correspondente a subopcao informada
+    
+     Args:
+        opcao (tupla): Opção do tipo de dados (PRODUCAO, COMERCIALIZACAO, PROCESSAMENTO, IMPORTACAO, EXPORTACAO)
+        subopcao (str): Subopcao recebida como string
+     Returns:
+        tupla: Subopção correspondente ou None caso não seja encontrada"""
 
     subopcao = subopcao.strip().lower()
 
@@ -94,6 +124,11 @@ def retorna_subopcao(opcao, subopcao):
     return None
 
 def gera_logger():
+    """
+    Configura o logger para escrita em um arquivo e console
+    
+     Args:
+        Nenhum"""
 
     logger.setLevel(logging.INFO)
 
@@ -113,5 +148,3 @@ def gera_logger():
 
 
 logger = logging.getLogger('Log API')
-gera_logger()
-

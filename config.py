@@ -1,9 +1,10 @@
-import os
+
+USERNAME = 'admin'
+SECRET_KEY = '@pI_mbr@p4'
 
 
-USER = ''
-PASSWORD = ''
 
+## Cofigurações para uso da lógica da aplicação
 URL = 'http://vitibrasil.cnpuv.embrapa.br/index.php'
 
 #Opções disponíveis
@@ -17,7 +18,7 @@ EXPORTACAO = ('Exportação', 'opt_06')
 VINIFERAS = ('Viníferas', 'subopt_01', 'ProcessaViniferas.csv')
 AMERICANAS_E_HIBRIDAS = ('Americanas e híbridas',  'subopt_02', 'ProcessaAmericanas.csv')
 UVAS_DE_MESA = ('Uvas de mesa', 'subopt_03', 'ProcessaMesa.csv')
-SEM_CLASSIFICACAO = ('Sem classificação', 'subopt_04', 'ProcessaMesa.csv')
+SEM_CLASSIFICACAO = ('Sem classificação', 'subopt_04', 'ProcessaSemclass.csv')
 
 #Subopções de Importação
 VINHOS_DE_MESA_IMP = ('Vinhos de mesa', 'subopt_01', 'ImpVinhos.csv')
@@ -31,3 +32,4 @@ VINHOS_DE_MESA_EXP = ('Vinhos de mesa','subopt_01', 'ExpVinho.csv')
 ESPUMANTES_EXP = ('Espumantes', 'subopt_02', 'ExpEspumantes.csv')
 UVAS_FRESCAS_EXP = ('Uvas Frescas','subopt_03', 'ExpUva.csv')
 SUCO_DE_UVA_EXP = ('Suco de uva', 'subopt_04', 'ExpSuco.csv')
+

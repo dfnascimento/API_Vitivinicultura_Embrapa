@@ -6,6 +6,16 @@ from utils import *
 
 
 def scrap_producao(ano):
+    """
+    Realiza a captura dos dados de produção do ano especificado.
+    
+     Parâmetros:
+        ano (int): Ano para o qual deseja capturar os dados de produção.
+     
+     Retorno:
+        DataFrame: Contendo os dados de produção do ano especificado.
+     
+     """
 
     url = get_url(PRODUCAO, None, ano)
 
@@ -22,7 +32,6 @@ def scrap_producao(ano):
         for i in range(0, len(itens), 2):
             produto = itens[i].text.strip()
             quantidade = itens[i+1].text.strip()
-            print(itens[i]['class'][0])
 
             if (itens[i]['class'][0] == "tb_item"):
                 tipo = produto
@@ -42,6 +51,17 @@ def scrap_producao(ano):
     return pd.DataFrame()
 
 def scrap_processamento(subopcao, ano):
+    """
+    Realiza a captura dos dados de processamento do ano especificado.
+    
+     Parâmetros:
+        subopcao (str): Subopção para o qual deseja capturar os dados de processamento.
+        ano (int): Ano para o qual deseja capturar os dados de processamento.
+     
+     Retorno:
+        DataFrame: Contendo os dados de processamento do ano especificado.
+     
+     """
 
     url = get_url(PROCESSAMENTO, subopcao, ano)
 
@@ -76,6 +96,17 @@ def scrap_processamento(subopcao, ano):
 
 
 def scrap_comercializacao(ano):
+    """
+    Realiza a captura dos dados de comercialização do ano especificado.
+    
+     Parâmetros:
+        ano (int): Ano para o qual deseja capturar os dados de comercialização.
+     
+     Retorno:
+        DataFrame: Contendo os dados de comercialização do ano especificado.
+     
+     
+     """
 
     url = get_url(COMERCIALIZACAO, None, ano)
 
@@ -109,6 +140,18 @@ def scrap_comercializacao(ano):
 
 
 def scrap_importacao(subopcao, ano):
+    """
+    Realiza a captura dos dados de importação do ano especificado.
+    
+     Parâmetros:
+        subopcao (str): Subopção para o qual deseja capturar os dados de importação.
+        ano (int): Ano para o qual deseja capturar os dados de importação.
+     
+     Retorno:
+        DataFrame: Contendo os dados de importação do ano especificado.
+     
+     
+     """
 
     url = get_url(IMPORTACAO, subopcao, ano)
 
@@ -145,6 +188,18 @@ def scrap_importacao(subopcao, ano):
 
 
 def scrap_exportacao(subopcao, ano):
+    """
+    Realiza a captura dos dados de exportação do ano especificado.
+    
+     Parâmetros:
+        subopcao (str): Subopção para o qual deseja capturar os dados de exportação.
+        ano (int): Ano para o qual deseja capturar os dados de exportação.
+     
+     Retorno:
+        DataFrame: Contendo os dados de exportação do ano especificado.
+     
+     
+     """
 
     url = get_url(EXPORTACAO, subopcao, ano)
 

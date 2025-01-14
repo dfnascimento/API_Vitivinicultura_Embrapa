@@ -1,0 +1,48 @@
+Endpoint para obtenção dos dados de importação por ano e subopção.
+---
+tags:
+  - importacao
+produces:
+  - application/json
+parameters:
+  - in: "body"
+    name: "ano"
+    description: O ano desejado para buscar os dados de processamento. O ano deve ser entre 1970 e 2023
+    type: string
+    example : "2023"
+    required: true
+  - in: "body"
+    name: "subopcao"
+    description: Subopção para a qual deseja buscar os dados. A subopção deve ser Vinhos de mesa, Espumantes, Uvas Frescas, Uvas passas ou Suco de uva
+    type: string
+    example : "Espumantes"
+    required: true
+responses:
+  200:
+    description: Um objeto JSON com as colunas ['Produto', 'Países','Quantidade[kg]', 'Valor(US$)', 'Ano'] e os dados de produção do ano especificado.
+    schema:
+      type: "object"
+      properties:
+        Produto:
+          type: "string"
+          example: "Vinhos de mesa"
+        Países:
+          type: "string"
+          example: "Alemanha"
+        Quantidade[kg]:
+          type: "string"
+          example: "52.297"
+        Valor(US$):
+          type: "string"
+          example: "30.498"
+        Ano:
+          type: "string"
+          example: "1970"
+  400:
+    description: "Dados inválidos"
+    schema:
+      type: "object"
+      properties:
+        error:
+          type: "string"
+          example: "Erro: Dados incompletos ou inválidos."
