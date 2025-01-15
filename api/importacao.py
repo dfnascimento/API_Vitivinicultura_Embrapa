@@ -8,7 +8,7 @@ from autenticacao import auth
 importacao = Blueprint('importacao', __name__ )
 
 @importacao.route('/', methods=['GET'])
-@swag_from('../docs/importacao.yml')
+#@swag_from('../docs/importacao.yml')
 @auth.login_required
 def get_importacao():
     """

@@ -8,7 +8,7 @@ from autenticacao import auth
 comercializacao = Blueprint('comercializacao', __name__ )
 
 @comercializacao.route('/', methods=['GET'])
-@swag_from('../docs/comercializacao.yml')
+#@swag_from('../docs/comercializacao.yml')
 @auth.login_required
 def get_comercializacao():
     """

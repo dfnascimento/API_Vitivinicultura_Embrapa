@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flasgger import Swagger
 from api.producao import producao
@@ -5,6 +6,8 @@ from api.processamento import processamento
 from api.comercializacao import comercializacao
 from api.importacao import importacao
 from api.exportacao import exportacao
+
+
 
 app = Flask(__name__)
 

@@ -9,7 +9,7 @@ from autenticacao import auth
 exportacao = Blueprint('exportacao', __name__ )
 
 @exportacao.route('/', methods=['GET'])
-@swag_from('../docs/exportacao.yml')
+#@swag_from('../docs/exportacao.yml')
 @auth.login_required
 def get_exportacao():
     """

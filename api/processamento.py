@@ -8,7 +8,7 @@ from autenticacao import auth
 processamento = Blueprint('processamento', __name__ )
 
 @processamento.route('/', methods=['GET'])
-@swag_from('../docs/processamento.yml')
+#@swag_from('../docs/processamento.yml')
 @auth.login_required
 def get_processamento():
     """

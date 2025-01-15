@@ -5,7 +5,7 @@ SECRET_KEY = '@pI_mbr@p4'
 
 
 ## Cofigurações para uso da lógica da aplicação
-URL = 'http://vitibrasil.cnpuv.embrapa.br/index.php'
+URL = 'errhttp://vitibrasil.cnpuv.embrapa.br/index.php'
 
 #Opções disponíveis
 PRODUCAO = ('Produção', 'opt_02', 'Producao.csv')
