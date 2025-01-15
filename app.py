@@ -5,7 +5,6 @@ from api.processamento import processamento
 from api.comercializacao import comercializacao
 from api.importacao import importacao
 from api.exportacao import exportacao
-from utils import gera_logger
 
 app = Flask(__name__)
 
@@ -20,6 +19,5 @@ app.register_blueprint(exportacao, url_prefix='/exportacao')
 swagger = Swagger(app)
 
 if __name__ == '__main__':
-    gera_logger()
     app.run(debug=True)
 

@@ -19,8 +19,6 @@ def scrap_producao(ano):
 
     url = get_url(PRODUCAO, None, ano)
 
-    logger.info("URL: " + url)
-
     try:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -65,8 +63,6 @@ def scrap_processamento(subopcao, ano):
 
     url = get_url(PROCESSAMENTO, subopcao, ano)
 
-    logger.info("URL: " + url)
-
     try:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -109,8 +105,6 @@ def scrap_comercializacao(ano):
      """
 
     url = get_url(COMERCIALIZACAO, None, ano)
-
-    logger.info("URL: " + url)
 
     try:
         response = requests.get(url)
@@ -155,7 +149,6 @@ def scrap_importacao(subopcao, ano):
 
     url = get_url(IMPORTACAO, subopcao, ano)
 
-    logger.info("URL: " + url)
 
     try:
         response = requests.get(url)
@@ -203,7 +196,6 @@ def scrap_exportacao(subopcao, ano):
 
     url = get_url(EXPORTACAO, subopcao, ano)
 
-    logger.info("URL: " + url)
 
     try:
         response = requests.get(url)
