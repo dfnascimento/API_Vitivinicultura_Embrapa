@@ -12,6 +12,8 @@ from api.exportacao import exportacao
 app = Flask(__name__)
 
 
+
+
 app.register_blueprint(producao, url_prefix='/producao')
 app.register_blueprint(processamento, url_prefix='/processamento')
 app.register_blueprint(comercializacao, url_prefix='/comercializacao')

@@ -1,3 +1,4 @@
+import os
 from flask import Blueprint, jsonify, request
 from flasgger.utils import swag_from
 from utils import ano_invalido
@@ -8,8 +9,12 @@ from autenticacao import auth
 
 producao = Blueprint('producao', __name__ )
 
+base_path = os.path.dirname(__file__) 
+parent_path = os.path.abspath(os.path.join(base_path, os.pardir))
+file_path = os.path.join(parent_path, 'docs', 'producao.yml')
+
 @producao.route('/', methods=['GET'])
-#@swag_from('../docs/producao.yml')
+@swag_from(file_path)
 @auth.login_required
 def get_producao():
     """

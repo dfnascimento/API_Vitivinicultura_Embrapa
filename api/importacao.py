@@ -1,3 +1,4 @@
+import os
 from flask import Blueprint, jsonify,  request
 from flasgger.utils import swag_from
 from utils import *
@@ -7,8 +8,13 @@ from autenticacao import auth
 
 importacao = Blueprint('importacao', __name__ )
 
+base_path = os.path.dirname(__file__)  
+parent_path = os.path.abspath(os.path.join(base_path, os.pardir))
+file_path = os.path.join(parent_path, 'docs', 'importacao.yml')
+
+
 @importacao.route('/', methods=['GET'])
-#@swag_from('../docs/importacao.yml')
+@swag_from(file_path)
 @auth.login_required
 def get_importacao():
     """
