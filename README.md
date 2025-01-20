@@ -20,6 +20,39 @@ O projeto foi desenvolvido em **Python**, utilizando:
 
 ---
 
+
+## 🚀 MVP - Deploy da API  
+
+A API foi implantada como um MVP e está acessível no seguinte link:  
+
+👉 [**API Vitivinicultura Embrapa**](https://api-vitivinicultura-embrapa.vercel.app/)  
+
+A documentação completa da API (API Docs) foi gerada utilizando **Swagger** e está disponível no endpoint abaixo:  
+
+👉 [**API Docs**](https://api-vitivinicultura-embrapa.vercel.app/apidocs/)  
+
+### Endpoints Disponíveis  
+
+| Método | Endpoint                     | Descrição                                     |  
+|--------|------------------------------|---------------------------------------------|  
+| GET    | `https://api-vitivinicultura-embrapa.vercel.app/producao`                 | Endpoint para buscar dados de produção por ano.                 |  
+| GET    | `https://api-vitivinicultura-embrapa.vercel.app/processamento`            | Endpoint para buscar dados de processamento por ano e subopção.         |  
+| GET    | `https://api-vitivinicultura-embrapa.vercel.app/comercializacao`          | Endpoint para buscar dados de comercialização por ano.           |  
+| GET    | `https://api-vitivinicultura-embrapa.vercel.app/importacao`               | Endpoint para obtenção dos dados de importação por ano e subopção.               |  
+| GET    | `https://api-vitivinicultura-embrapa.vercel.app/exportacao`               | Endpoint para obtenção dos dados de exportação por ano e subopção.               |  
+
+
+### **Autenticação - Basic Auth**  
+
+Para acessar a API, é necessário autenticar-se utilizando **Basic Auth**.  
+
+#### **Credenciais de Acesso (exemplo)**  
+- **Usuário**: `admin`  
+- **Senha**: `@pI_mbr@p4`  
+
+---
+
+
 ## 🛠️ Arquitetura do Projeto  
 
 O fluxo do projeto é composto pelas seguintes etapas:  
@@ -44,17 +77,14 @@ O fluxo do projeto é composto pelas seguintes etapas:
 ![Imagem com a Arquitetura do projeto.](https://github.com/dfnascimento/API_Vitivinicultura_Embrapa/blob/main/arquitetura.png)
 ---
 
-## 📂 Estrutura do Projeto  
-
-
-
----
 
 ## 🚀 Tecnologias Utilizadas  
 
 - **Python**  
 - **Flask**  
-- **BeautifulSoup**  
+- **BeautifulSoup**
+- **Pandas**
+- **Flasgger**
 
 ---
 
