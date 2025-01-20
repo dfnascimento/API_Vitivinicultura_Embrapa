@@ -21,6 +21,7 @@ app.register_blueprint(importacao, url_prefix='/importacao')
 app.register_blueprint(exportacao, url_prefix='/exportacao')
 
 
+
 swagger = Swagger(app)
 
 

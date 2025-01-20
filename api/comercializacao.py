@@ -33,7 +33,7 @@ def get_comercializacao():
     valida_ano = ano_invalido(ano)
 
     if valida_ano != None :
-        return jsonify(valida_ano), 400
+        return jsonify({"error": valida_ano}), 400
 
     df = scrap_comercializacao(ano)
 

@@ -34,12 +34,12 @@ def get_processamento():
      
     valida_ano = ano_invalido(ano)
     if valida_ano != None :
-        return jsonify(valida_ano), 400
+        return jsonify({"error": valida_ano}), 400
     
     valida_sub_opcao= subopcao_invalida(PROCESSAMENTO, subopcao)
 
     if valida_sub_opcao != None:
-        return jsonify(valida_sub_opcao), 400
+        return jsonify({"error": valida_sub_opcao}), 400
     
     const_subopcao = retorna_subopcao(PROCESSAMENTO, subopcao)
 
