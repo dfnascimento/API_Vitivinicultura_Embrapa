@@ -40,6 +40,8 @@ O fluxo do projeto é composto pelas seguintes etapas:
 ### **4. Sistema de Previsão**  
 - O modelo treinado é disponibilizado em um **Sistema de Previsão para Vitivinicultura**, permitindo que usuários finais acessem previsões e insights de forma prática e eficiente.  
 
+
+![Imagem com a Arquitetura do projeto.](https://github.com/dfnascimento/API_Vitivinicultura_Embrapa/blob/main/arquitetura.png)****
 ---
 
 ## 📂 Estrutura do Projeto  
@@ -73,7 +75,12 @@ Certifique-se de ter o **Python 3.9+** instalado em sua máquina.
    ```
    pip install -r requirements.txt
    ```
-4. Acesse a API no navegador ou via ferramentas como Postman:
+
+3. Execute a aplicação:
+```
+  python app.py
+  ```
+5. Acesse a API no navegador ou via ferramentas como Postman:
 
 ```
 
