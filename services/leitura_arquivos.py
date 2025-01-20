@@ -12,7 +12,7 @@ def get_producao_csv(ano):
 
     """
 
-    path_file = 'files/' + PRODUCAO[2]
+    path_file = 'data/' + PRODUCAO[2]
 
     df = pd.read_csv(path_file, sep =';', usecols=['produto', 'control', str(ano)])
 
@@ -66,7 +66,7 @@ def get_processamento_csv(subopcao, ano):
      Dataframe: Dataframe com os dados do arquivo csv  
     """
 
-    path_file = 'files/' + subopcao[2]
+    path_file = 'data/' + subopcao[2]
 
     try:
         df = pd.read_csv(path_file, sep =';', usecols=['control','cultivar', str(ano)])
@@ -96,7 +96,7 @@ def get_comercializacao_csv(ano):
         Dataframe: Dataframe com os dados do arquivo csv
     
     """
-    path_file = 'files/' + COMERCIALIZACAO[2]
+    path_file = 'data/' + COMERCIALIZACAO[2]
 
     df = pd.read_csv(path_file, sep =';', usecols=['control', 'Produto', str(ano)])
 
@@ -124,9 +124,9 @@ def get_importacao_csv(subopcao, ano):
         Dataframe: Dataframe com os dados do arquivo csv
     
     """
-    path_file = 'files/' + subopcao[2]
+    path_file = 'data/' + subopcao[2]
 
-    path_file = 'files/' + subopcao[2]
+    path_file = 'data/' + subopcao[2]
 
     try:
         df = pd.read_csv(path_file, sep =';', usecols=['País', str(ano), str(ano) + '.1'])
@@ -155,7 +155,7 @@ def get_exportacao_csv(subopcao, ano):
      Returns:
         Dataframe: Dataframe com os dados do arquivo csv"""
 
-    path_file = 'files/' + subopcao[2]
+    path_file = 'data/' + subopcao[2]
 
     try:
         df = pd.read_csv(path_file, sep =';', usecols=['País', str(ano), str(ano) + '.1'])

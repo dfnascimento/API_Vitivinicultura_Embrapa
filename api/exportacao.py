@@ -2,8 +2,8 @@ import os
 from flask import Blueprint, jsonify, request
 from flasgger.utils import swag_from
 from utils import *
-from core.scrapping import scrap_exportacao
-from core.leitura_arquivos import get_exportacao_csv
+from services.scrapping import scrap_exportacao
+from services.leitura_arquivos import get_exportacao_csv
 from autenticacao import auth
 
 

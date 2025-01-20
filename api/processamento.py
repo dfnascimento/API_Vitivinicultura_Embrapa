@@ -2,8 +2,8 @@ import os
 from flask import Blueprint, jsonify,  request
 from flasgger.utils import swag_from
 from utils import *
-from core.scrapping import scrap_processamento
-from core.leitura_arquivos import get_processamento_csv
+from services.scrapping import scrap_processamento
+from services.leitura_arquivos import get_processamento_csv
 from autenticacao import auth
 
 processamento = Blueprint('processamento', __name__ )

@@ -2,8 +2,8 @@ import os
 from flask import Blueprint, jsonify, request
 from flasgger.utils import swag_from
 from utils import ano_invalido
-from core.scrapping import scrap_comercializacao
-from core.leitura_arquivos import get_comercializacao_csv
+from services.scrapping import scrap_comercializacao
+from services.leitura_arquivos import get_comercializacao_csv
 from autenticacao import auth
 
 comercializacao = Blueprint('comercializacao', __name__ )
