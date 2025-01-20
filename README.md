@@ -87,3 +87,8 @@ Certifique-se de ter o **Python 3.9+** instalado em sua máquina.
 http://localhost:5000
 
 ```
+
+
+
+📞 Contato
+Para dúvidas ou sugestões, entre em contato pelo e-mail: df.nascimento93@gmail.com
