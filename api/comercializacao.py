@@ -4,7 +4,7 @@ from flasgger.utils import swag_from
 from utils import ano_invalido
 from services.scrapping import scrap_comercializacao
 from services.leitura_arquivos import get_comercializacao_csv
-from autenticacao import auth
+from auth.autenticacao import auth
 
 comercializacao = Blueprint('comercializacao', __name__ )
 

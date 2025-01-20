@@ -23,6 +23,18 @@ app.register_blueprint(exportacao, url_prefix='/exportacao')
 
 swagger = Swagger(app)
 
+
+@app.route('/')
+def home():
+    return """
+    <h1>Bem-vindo à API Vitivinicultura Embrapa</h1>
+    <p>Esta é a página inicial da API.</p>
+    <ul>
+        <li><a href="/apidocs">Documentação</a></li>
+    </ul>
+    """
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 

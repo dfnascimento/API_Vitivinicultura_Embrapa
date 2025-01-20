@@ -4,7 +4,7 @@ from flasgger.utils import swag_from
 from utils import *
 from services.scrapping import scrap_exportacao
 from services.leitura_arquivos import get_exportacao_csv
-from autenticacao import auth
+from auth.autenticacao import auth
 
 
 exportacao = Blueprint('exportacao', __name__ )
