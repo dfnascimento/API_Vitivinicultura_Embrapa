@@ -1,25 +1,82 @@
-# API Vitivinicultura Embrapa 
+# API Vitivinicultura Embrapa  
 
-Esse projeto foi desenvolvido por Diego de Faria do Nascimento como atividade parte da avaliação da Pós-Graduação de Machine Learning Engineering do Pos Tech FIAP
+Este projeto foi desenvolvido por **Diego de Faria do Nascimento** como parte da avaliação do curso de Pós-Graduação em **Machine Learning Engineering** do Pos Tech FIAP.  
 
-## Descrição: 
+---
 
-Trata-se de uma API pública para consulta aos dados do site da Embrapa, abrangendo informações das seções de Produção, Processamento, Comercialização, Importação e Exportação.
+## 📄 Descrição  
 
-A API foi desenvolvida na liguagem de programação Python utilizando as bibliotecas Flask para a construção da API REST e definição das rotas, Beautiful Soap para a consulta e extração dos dados do site da embrapa com utilização das técnicas de Webscrapping.
+A **API Vitivinicultura Embrapa** é uma API pública projetada para facilitar a consulta aos dados do site da **Embrapa**, permitindo a consulta de dados disponibilizados ns seguintes abas do websits:  
+
+- **Produção**  
+- **Processamento**  
+- **Comercialização**  
+- **Importação**  
+- **Exportação**  
+
+O projeto foi desenvolvido em **Python**, utilizando:  
+- **Flask**: Para construção da API REST e definição de rotas.  
+- **BeautifulSoup**: Para extração de dados por meio de técnicas de Web Scraping.  
+
+---
+
+## 🛠️ Arquitetura do Projeto  
+
+O fluxo do projeto é composto pelas seguintes etapas:  
+
+### **1. Coleta de Dados**  
+- Os dados são extraídos diretamente do site da Embrapa utilizando Web Scraping.  
+- Em casos de instabilidade no site, a API consulta dados armazenados localmente em arquivos CSV previamente baixados.  
+
+### **2. Transformação e Disponibilização**  
+- As informações extraídas são processadas e disponibilizadas no formato **JSON** através das rotas da API.  
+
+### **3. Integração com Pipeline de Machine Learning**  
+- Um pipeline de Machine Learning consome os dados fornecidos pela API para:  
+  - **Pré-processamento**: Limpeza e transformação dos dados.  
+  - **Treinamento de Modelos**: Construção de modelos de Machine Learning.  
+  - **Armazenamento**: Persistência dos resultados em um banco de dados.  
+
+### **4. Sistema de Previsão**  
+- O modelo treinado é disponibilizado em um **Sistema de Previsão para Vitivinicultura**, permitindo que usuários finais acessem previsões e insights de forma prática e eficiente.  
+
+---
+
+## 📂 Estrutura do Projeto  
 
 
 
+---
 
-## Arquitetura do Projeto:
+## 🚀 Tecnologias Utilizadas  
 
-O fluxo dp projeto envolve as seguintes etapas:
+- **Python**  
+- **Flask**  
+- **BeautifulSoup**  
 
-* Coleta de dados: a partir do uso da API REST Vitivinicultura da Embrapa serão coletados via webscrapping os dados do site da Embraba, em caso de instabilidade no link de acesso para embraba, a consulta ira ocorrer em arquivos csv baixados do site da embrapa e disponiveis offline
-* Transformação e disponibilização: Os dados serão consultados via chamada de API Rest e disponibilizados no formado JSON
-* Integração com Pipeline de Machine Learning: um pipeline de machine learning irá consuir os dados por intermedio da API e irá fazer o pre-processamento, tratamento do modelo de Machine Learning, gravação em um banco de dados com atuação de um Cientista de Dados .
-* O Pipeline de Machine Learning irá disponibilizar o modelo de Machine Learning em um Sistema de Previsão para Vitivinicultura que será utilizado pelo usuário final. 
+---
 
+## 📝 Como Executar o Projeto  
 
-![Imagem com a Arquitetura do projeto.](https://github.com/dfnascimento/API_Vitivinicultura_Embrapa/blob/main/arquitetura.png)****
+### Pré-requisitos  
+Certifique-se de ter o **Python 3.9+** instalado em sua máquina.  
 
+### Passos  
+
+1. Clone o repositório:  
+   ```
+   git clone https://github.com/dfnascimento/API_Vitivinicultura_Embrapa.git
+   cd API_Vitivinicultura_Embrapa
+   ```
+2. Instale as dependências:
+
+   ```
+   pip install -r requirements.txt
+   ```
+4. Acesse a API no navegador ou via ferramentas como Postman:
+
+```
+
+http://localhost:5000
+
+```
