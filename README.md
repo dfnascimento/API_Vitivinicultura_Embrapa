@@ -77,18 +77,15 @@ Certifique-se de ter o **Python 3.9+** instalado em sua máquina.
    ```
 
 3. Execute a aplicação:
-```
-  python app.py
-  ```
+    ```
+    python app.py
+    ```
 5. Acesse a API no navegador ou via ferramentas como Postman:
 
-```
+    ```
+    http://localhost:5000
 
-http://localhost:5000
-
-```
-
-
+    ```
 
 ---
 
