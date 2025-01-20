@@ -6,7 +6,7 @@ Este projeto foi desenvolvido por **Diego de Faria do Nascimento** como parte da
 
 ## 📄 Descrição  
 
-A **API Vitivinicultura Embrapa** é uma API pública projetada para facilitar a consulta aos dados do site da **Embrapa**, permitindo a consulta de dados disponibilizados ns seguintes abas do websits:  
+A **API Vitivinicultura Embrapa** é uma API pública projetada para facilitar a consulta aos dados do site da **Embrapa**, permitindo a consulta de dados disponibilizados ns seguintes abas do website da Embrapa:  
 
 - **Produção**  
 - **Processamento**  
