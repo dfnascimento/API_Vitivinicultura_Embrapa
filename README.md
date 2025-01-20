@@ -74,7 +74,7 @@ O fluxo do projeto é composto pelas seguintes etapas:
 - O modelo treinado é disponibilizado em um **Sistema de Previsão para Vitivinicultura**, permitindo que usuários finais acessem previsões e insights de forma prática e eficiente.  
 
 
-![Imagem com a Arquitetura do projeto.](https://github.com/dfnascimento/API_Vitivinicultura_Embrapa/blob/main/arquitetura.png)
+![Imagem com a Arquitetura do projeto.](https://github.com/dfnascimento/API_Vitivinicultura_Embrapa/blob/main/docs/arquitetura.png)
 ---
 
 
